@@ -53,6 +53,11 @@ app.get('/bad', (req, res) => {
         errorMessage: 'cant load the page error 404'
     });
 });
+app.get('/project', (req, res) => {
+    res.render('project.hbs',{
+        pageTitle: 'Project Page'
+    })
+});
 
 app.listen(port, () => {
     console.log(`server is up on port ${port}`)
